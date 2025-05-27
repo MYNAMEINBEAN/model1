@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FreezePop Candy Co.</title>
+  <link href="https://cdn.styler.style/1.4.0/styler.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .bg-card {
+      background-color: #1e1e1e;
+    }
+    .bg-footer {
+      background-color: #0f0f0f;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="flex justify-between items-center p-4 bg-card">
+    <div class="text-xl font-bold">FreezePop Candy Co.</div>
+    <nav>
+      <ul class="flex gap-4">
+        <li><a href="#products" class="text-white hover:text-pink">Products</a></li>
+        <li><a href="#about" class="text-white hover:text-pink">About</a></li>
+        <li><a href="#contact" class="text-white hover:text-pink">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="text-center py-20 bg-gradient-to-br from-black to-gray-900">
+    <h1 class="text-4xl font-bold mb-4">Freeze-Dried Candy Like Never Before</h1>
+    <p class="text-lg mb-6">Crunchy. Sweet. Addictively Good.</p>
+    <button onclick="scrollToProducts()" class="px-6 py-2 bg-pink text-black font-semibold rounded hover:bg-fuchsia">
+      Shop Now
+    </button>
+  </section>
+
+  <section id="products" class="py-16 text-center">
+    <h2 class="text-3xl font-semibold mb-8">Our Candy Collection</h2>
+    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-4">
+      <div class="p-4 rounded bg-card">
+        <img src="https://via.placeholder.com/150" alt="Skittles" class="mb-4 rounded">
+        <h3 class="text-xl font-bold mb-2">Freeze-Dried Skittles</h3>
+        <p class="mb-4">Bursts of fruity crunch in every bite.</p>
+        <!-- Stripe Buy Button here -->
+        <stripe-buy-button
+          buy-button-id="buy_btn_1RTVXX2fhqbvKdVDCxaijnXT"
+          publishable-key="pk_test_51RTVUa2fhqbvKdVD7WqRB8oMqkSGOuXQZsejmDvU69NQ47SEkdpbivINQLtL83Zn8AILznhq6CIrb6PHztLlXQSj00STkaNRAC"
+        ></stripe-buy-button>
+      </div>
+
+      <div class="p-4 rounded bg-card">
+        <img src="https://via.placeholder.com/150" alt="Gummy Bears" class="mb-4 rounded">
+        <h3 class="text-xl font-bold mb-2">Freeze-Dried Gummies</h3>
+        <p>Light, airy, and impossibly tasty.</p>
+      </div>
+
+      <div class="p-4 rounded bg-card">
+        <img src="https://via.placeholder.com/150" alt="Caramel Puffs" class="mb-4 rounded">
+        <h3 class="text-xl font-bold mb-2">Caramel Puffs</h3>
+        <p>Melt-in-your-mouth caramelized goodness.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-16 text-center bg-card">
+    <h2 class="text-3xl font-semibold mb-4">About Us</h2>
+    <p class="max-w-2xl mx-auto">We specialize in freeze-drying candy to create unique textures and flavors without any liquids. Based in sweet science, driven by candy passion.</p>
+  </section>
+
+  <section id="contact" class="py-16 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Contact Us</h2>
+    <p>Email: <a href="mailto:info@freezepopcandy.com" class="text-pink hover:underline">info@freezepopcandy.com</a></p>
+  </section>
+
+  <footer class="py-4 text-center text-gray bg-footer">
+    &copy; 2025 FreezePop Candy Co. All rights reserved.
+  </footer>
+
+  <script src="https://js.stripe.com/v3/buy-button.js" async></script>
+  <script>
+    function scrollToProducts() {
+      document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
